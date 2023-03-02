@@ -1,0 +1,180 @@
+body {
+    padding: 0;
+    margin: 0;
+    /* /permet de centrer les éléments/  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* /fin centrer les éléments/ 
+    /prendre 100% de la hauteur de la fenetre/  */
+    height: 100vh;
+}
+
+#plateau{
+    height: 450px;
+    width:  800px;
+}
+
+.fenetre{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#debut{
+    background-color: gray;
+    position : relative;
+}
+
+label{
+    background-color: blue;
+    color: white;
+    position: absolute;
+    left: 250px;
+    top: 125px;
+}
+
+input{
+    background-color: blue;
+    color: white;
+    position: absolute;
+    right: 250px;
+    top: 125px;
+}
+
+button#start{
+    background-color: blue;
+    color: white;
+    padding: 2px 50px;
+    position: absolute;
+    left: 310px;
+    top: 225px;
+}
+
+#jeu{
+    background-color: green;
+    display: none;
+    position: relative;
+    cursor: url("../images/cursor.cur"), auto;
+}
+
+img{
+    position: absolute;
+    width: 800px;
+}
+
+#sky{
+    z-index: 0;
+}
+
+#grass{
+    bottom: 0px;
+    z-index: 100;
+}
+
+.munition{
+    position: relative;
+    width: 10px;
+    margin-left: 10px;
+}
+
+#balles{
+    display: flex;
+    
+    position:absolute;
+    bottom : 20px;
+    right: 10px;
+    z-index: 150;
+}
+
+.duck{
+    position:absolute;
+    width: 100px;
+    z-index: 50;
+}
+
+.superDuck1{
+    position:absolute;
+    width: 100px;
+    z-index: 50;
+}
+
+.superDuck2{
+    position:absolute;
+    width: 100px;
+    z-index: 50;
+}
+
+#fin{
+    background-color: red;
+    display: none;
+    position: relative;
+}
+
+#gameOver{
+    position: absolute;
+    font:x-large;
+    font-size:xx-large;
+    color: white;
+    left: 310px;
+    top: 225px;
+}
+
+#gameScore{
+    position: absolute;
+    font:large;
+    font-size:x-large;
+    color: white;
+    left: 360px;
+    top: 275px;
+}
+
+#player{
+    position: absolute;
+    font:large;
+    font-size:x-large;
+    color: white;
+    left: 300px;
+    top: 275px;
+}
+
+
+#multiplicateur{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 150;
+}
+
+
+
+#score{
+    position: absolute;
+    top: 10px;
+    left: 700px;
+    z-index: 150;
+}
+
+button#toScore{
+    background-color: blue;
+    color: white;
+    padding: 2px 50px;
+    position: absolute;
+    left: 310px;
+    top: 350px;
+}
+
+#tableauScore{
+    background-color: black;
+    position : relative;
+    display: none;
+    padding-left: 30px;
+}
+
+h1{
+    color: white;
+}
+
+.table{
+    color: white;
+}

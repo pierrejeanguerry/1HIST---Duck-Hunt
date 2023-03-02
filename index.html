@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+    <div id="plateau">
+        <div class="fenetre" id="debut">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" value="">
+            <button id="start">Commencer</button>
+        </div>
+        <div class="fenetre" id="jeu">
+            <span id="multiplicateur">Multiplicateur : x1</span>
+            <span id="score">Score : 0</span>
+            <div id="balles">
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+                <div><img class="munition" src="assets/images/bullet.png"></div>
+            </div>
+            <img id="sky" src="assets/images/sky.png">
+            <img id="grass" src="assets/images/grass.png">
+            
+        </div>
+        <div class="fenetre" id="fin">
+            <span id="gameOver">GAME OVER</span>
+            <span id="player"></span>
+            <span id="gameScore">Score : 0</span>
+            <button id="toScore">Tableau des scores</button>
+        </div>
+        <div class="fenetre" id="tableauScore">
+            <h1>Tableau des scores</h1>
+
+        </div>
+    </div>
+    <script src="assets/scripts/gameOver.js"></script>
+    <script src="assets/scripts/storage.js"></script>
+    
+    <script src="assets/scripts/script.js"></script>
+</body>
