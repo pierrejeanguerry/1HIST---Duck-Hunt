@@ -7,6 +7,7 @@ function commencer() {
     let form = document.querySelector("#name");
     let player = document.querySelector("#player");
     let ambiance = new Audio('assets/audio/ambiance.mp3');
+    
     button.addEventListener('click', () => {
         if (form.value != "") {
             player.innerHTML = form.value;
@@ -26,7 +27,7 @@ function getRandomInt(min, max) {
     return nbRandom;
 }
 
-//creer un objet newDuck, lui donne les caracteristique, l'anime et le delete
+//creer un objet newDuck, lui donne les caracteristique d'un super duck, l'anime et le delete
 function spawnSuperDuck() {
     let superSound = new Audio('assets/audio/helicoptere.mp3');
     superSound.load();
@@ -38,9 +39,7 @@ function spawnSuperDuck() {
     newDuck.draggable = false;
     jeu.insertAdjacentElement("beforeend", newDuck);
     let duree = getRandomInt(2000, 4000);
-    //animate the duck
     newDuck.animate([
-        // keyframes
         {
             transform: 'translateY(' + getRandomInt(380, 430) + 'px' + ') translateX(' + getRandomInt(0, 800) + 'px' + ') rotate(-90deg) ',
         },
@@ -48,7 +47,6 @@ function spawnSuperDuck() {
             transform: 'translateY(' + -200 + 'px) translateX(' + getRandomInt(0, 800) + 'px) rotate(' + getRandomInt(45, 135) + 'deg)'
         }
     ], {
-        // timing options
         duration: duree,
         iterations: 1
     });
@@ -58,7 +56,7 @@ function spawnSuperDuck() {
     }, duree);
 }
 
-
+//creer un objet newDuck, lui donne les caracteristique d'un duck, l'anime et le delete
 function spawnDuck() {
     let jeu = document.querySelector("#jeu");
     let newDuck = document.createElement("img");
@@ -67,9 +65,7 @@ function spawnDuck() {
     newDuck.draggable = false;
     jeu.insertAdjacentElement("beforeend", newDuck);
     let duree = getRandomInt(2000, 4000);
-    //animate the duck
     newDuck.animate([
-        // keyframes
         {
             transform: 'translateY(' + getRandomInt(380, 430) + 'px' + ') translateX(' + getRandomInt(0, 800) + 'px' + ') rotate(90deg) ',
         },
@@ -77,7 +73,6 @@ function spawnDuck() {
             transform: 'translateY(' + -200 + 'px) translateX(' + getRandomInt(0, 800) + 'px) rotate(' + getRandomInt(45, 135) + 'deg)'
         }
     ], {
-        // timing options
         duration: duree,
         iterations: 1
     });
@@ -88,10 +83,8 @@ function spawnDuck() {
 
 //lance la partie, la creation de cannards 
 function startGame() {
-    console.log("Debut de la partie");
     let partie = setInterval(() => {
         let nb = getRandomInt(0, 100);
-        console.log(nb);
         if (nb < 5)
             spawnSuperDuck();
         else
@@ -149,7 +142,6 @@ function addGlobalListener() {
 
             updateStorage(player.innerHTML, nb_score);
             gameOver();
-            console.log("Game Over");
         }
     });
 }

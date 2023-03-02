@@ -1,3 +1,5 @@
+// exercice sur la manipulation du localstorage
+
 function initStorage() {
     let obj = new Array();
     writeStorage(obj);
@@ -59,24 +61,3 @@ function updateStorage(newName, newScore) {
     }
     writeStorage(obj);
 }
-
-// let joueur = {
-//     name : newName,
-//     score : newScore
-// }
-
-
-//Lire une donnée simple (string)
-// let str = localStorage.getItem("key");
-
-//Lire une donnée complexe (objet)
-// let obj = JSON.parse(localStorage.getItem("key"));
-
-//Lire un entier
-// let nbr = parseInt(localStorage.getItem("key"));
-
-//supprimer objet du local storage
-// localStorage.removeItem("key");
-
-//vider localStorage
-// localStorage.clear();
